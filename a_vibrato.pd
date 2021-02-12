@@ -1,0 +1,34 @@
+#N canvas 0 49 1920 1008 10;
+#X obj 154 218 delwrite~ \$0-DelayLine;
+#X obj 319 2 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5700 1;
+#X obj 321 187 osc~ 1;
+#X obj 321 277 vd~ \$0-DelayLine 1000;
+#X floatatom 312 138 5 0 0 0 - - -, f 5;
+#X obj 360 2 vsl 15 128 0 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 11900 1;
+#X text 349 -14 depth;
+#X floatatom 354 138 5 0 0 0 - - -, f 5;
+#X obj 321 208 *~;
+#X text 364 184 -1:1;
+#X text 346 206 -depth:depth;
+#X obj 272 395 outlet~;
+#X obj 115 193 spigot~;
+#X obj 399 109 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 110 221 bypass;
+#X obj 115 122 inlet~ audio;
+#X text 309 -14 speed;
+#X text 384 92 on/off;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 8 0;
+#X connect 3 0 11 0;
+#X connect 5 0 7 0;
+#X connect 5 0 8 1;
+#X connect 8 0 3 0;
+#X connect 12 0 11 0;
+#X connect 12 1 0 0;
+#X connect 13 0 12 1;
+#X connect 15 0 12 0;
+#X coords 0 -1 1 1 120 190 1 306 -32;

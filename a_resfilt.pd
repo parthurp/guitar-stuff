@@ -1,0 +1,48 @@
+#N canvas 1 47 1918 1008 10;
+#X obj 478 511 outlet~;
+#X obj 390 -154 inlet~;
+#X obj 551 -87 inlet Q;
+#X obj 513 -117 inlet fc;
+#X obj 551 6 vsl 15 128 1 300 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 9350 1;
+#X obj 513 6 vsl 15 128 100 8000 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 7500 1;
+#X text 513 -11 fc;
+#X text 553 -11 Q;
+#X floatatom 504 143 5 0 0 0 - - -, f 5;
+#X floatatom 544 143 5 0 0 0 - - -, f 5;
+#X obj 478 312 vcf~, f 12;
+#X obj 513 255 line~;
+#X msg 513 233 \$1 10;
+#X obj 504 175 hsl 70 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1533 1;
+#X obj 478 381 *~;
+#X floatatom 524 194 5 0 0 0 - - -, f 5;
+#X obj 584 -64 inlet gain;
+#X obj 569 199 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 390 211 spigot~;
+#X text 388 185 bypass;
+#X obj 741 -37 inlet OnOff;
+#X obj 582 260 / 3;
+#X connect 1 0 18 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 9 0;
+#X connect 4 0 10 2;
+#X connect 4 0 21 0;
+#X connect 5 0 8 0;
+#X connect 5 0 12 0;
+#X connect 10 0 14 0;
+#X connect 11 0 10 1;
+#X connect 12 0 11 0;
+#X connect 13 0 14 1;
+#X connect 13 0 15 0;
+#X connect 14 0 0 0;
+#X connect 16 0 13 0;
+#X connect 17 0 18 1;
+#X connect 18 0 0 0;
+#X connect 18 1 10 0;
+#X connect 20 0 17 0;
+#X connect 21 0 13 0;
+#X coords 0 -1 1 1 88 240 1 499 -23;

@@ -1,0 +1,33 @@
+#N canvas 2632 101 649 369 10;
+#X obj 308 94 ctlin;
+#X floatatom 315 148 5 0 0 0 - - -, f 5;
+#X obj 153 120 pgmin;
+#X floatatom 153 164 5 0 0 0 - - -, f 5;
+#X text 128 97 up & down buttons;
+#X obj 32 79 notein;
+#X text 32 54 note;
+#X floatatom 30 134 5 0 0 0 - - -, f 5;
+#X floatatom 48 113 5 0 0 0 - - -, f 5;
+#X floatatom 368 142 5 0 0 0 - - -, f 5;
+#X text 305 74 volume knob = chan7;
+#X text 309 54 expr pedal = chan4;
+#X text 328 33 hold = chan64;
+#X obj 376 184 sel 7 4 64;
+#X obj 380 250 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 411 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 440 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 472 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 0 1 9 0;
+#X connect 0 1 13 0;
+#X connect 2 0 3 0;
+#X connect 5 0 7 0;
+#X connect 5 1 8 0;
+#X connect 13 0 14 0;
+#X connect 13 1 15 0;
+#X connect 13 2 16 0;
+#X connect 13 3 17 0;

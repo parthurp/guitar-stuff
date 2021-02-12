@@ -1,0 +1,44 @@
+#N canvas 0 49 1920 1008 10;
+#X obj 205 -147 inlet frequency;
+#X obj 240 484 outlet~ sound;
+#X obj 232 -122 inlet Amplitude;
+#X obj 232 321 min 1;
+#X obj 205 240 *~ 2;
+#X obj 205 272 -~ 1;
+#X text 234 272 -1:1;
+#X obj 205 143 phasor~ \$1;
+#X text 270 144 0:1;
+#X text 237 239 0:2;
+#X obj 232 100 abs;
+#X obj 205 361 *~ \$2;
+#X obj 232 29 hsl 40 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 205 -66 vsl 15 128 30 3000 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 228 12 amp;
+#X text 203 -82 f;
+#X text 228 -25 SAWTOOTH;
+#X floatatom 200 71 5 0 0 0 - - -, f 5;
+#X floatatom 246 49 4 0 0 0 - - -, f 4;
+#X obj 290 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 290 409 line~;
+#X obj 240 453 *~;
+#X msg 290 382 \$1 50;
+#X connect 0 0 13 0;
+#X connect 2 0 12 0;
+#X connect 3 0 11 1;
+#X connect 4 0 5 0;
+#X connect 5 0 11 0;
+#X connect 7 0 4 0;
+#X connect 10 0 3 0;
+#X connect 11 0 21 0;
+#X connect 12 0 10 0;
+#X connect 12 0 18 0;
+#X connect 13 0 7 0;
+#X connect 13 0 17 0;
+#X connect 19 0 22 0;
+#X connect 20 0 21 1;
+#X connect 21 0 1 0;
+#X connect 22 0 20 0;
+#X coords 0 -1 1 1 112 184 1 196 -94;

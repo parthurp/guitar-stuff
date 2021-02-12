@@ -1,0 +1,50 @@
+#N canvas 0 49 1920 1008 10;
+#X obj 771 421 readsf~;
+#X msg 771 375 start;
+#X msg 455 347 open /home/michel/GuitareMIDI/sounds/karate.wav;
+#X obj 455 256 openpanel;
+#X obj 864 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 455 278 set open \$1;
+#X msg 818 375 stop;
+#X obj 859 192 bng 29 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 860 245 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 841 643 outlet~;
+#X obj 920 138 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 10300 1;
+#X obj 841 610 *~;
+#X text 918 270 vol;
+#X text 856 177 start;
+#X text 861 231 stop;
+#X text 858 133 open;
+#X obj 1036 52 loadbang;
+#X msg 1036 74 1;
+#X obj 779 43 inlet stop;
+#X obj 754 20 inlet start;
+#X obj 920 33 inlet vol;
+#X obj 455 300 t b a;
+#X msg 455 234 symbol /home/michel/GuitareMIDI/sounds;
+#X connect 0 0 11 0;
+#X connect 0 1 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 22 0;
+#X connect 5 0 21 0;
+#X connect 6 0 0 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;
+#X connect 8 0 6 0;
+#X connect 10 0 11 1;
+#X connect 11 0 9 0;
+#X connect 16 0 17 0;
+#X connect 17 0 10 0;
+#X connect 18 0 8 0;
+#X connect 19 0 7 0;
+#X connect 20 0 10 0;
+#X connect 21 0 2 0;
+#X connect 21 1 2 0;
+#X connect 22 0 3 0;
+#X coords 0 -1 1 1 100 180 1 848 110;

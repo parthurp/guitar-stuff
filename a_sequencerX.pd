@@ -1,0 +1,26 @@
+#N canvas 0 28 1920 1029 10;
+#X obj 762 537 array define \$1-array;
+#X obj 893 410 array define \$1-array;
+#X msg 796 406 const 0;
+#X obj 945 619 array size \$1-array;
+#X msg 949 531 8;
+#X floatatom 984 672 5 0 0 0 - - -, f 5;
+#X obj 943 663 print;
+#X obj 1012 507 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 751 757 array set \$1-array;
+#X obj 480 518 array get \$1-array;
+#X floatatom 493 411 5 0 0 0 - - -, f 5;
+#X floatatom 486 604 5 0 0 0 - - -, f 5;
+#X msg 746 681 60 62 61 63 62 64 63 65;
+#X obj 550 277 vradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 6;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 7 0 3 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 12 0 8 0;
+#X connect 13 0 9 0;
